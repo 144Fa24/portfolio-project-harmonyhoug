@@ -101,5 +101,6 @@ main {
 footer {
     font-size: 1em;
     text-align: center;
+    text-decoration: none;
     color: #ff0095;
 }
