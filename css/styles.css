@@ -5,7 +5,7 @@ Date: October 1, 2024
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img {
+body, header, nav, main, footer, h1, div, img, ul {
     margin: 0;
     padding: 0;
     border: 0;
@@ -13,7 +13,7 @@ body, header, nav, main, footer, h1, div, img {
 
 /* Style rule for body */
 body {
-    background-color: #fff;
+    background-color: antiquewhite;
 }
 
 img {
@@ -24,42 +24,48 @@ img {
 /* Style rule for header */
 header {
     width: 100%;
-    text-align: left;
+    text-align: right;
 }
 
 /* Style rules for the navigation area */
 nav {
-    width: 70%;
-    float: right;
-    padding: 2em;
+    padding: 1%;
+    margin-bottom: 1%;
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
-    text-align: right;
+    text-align: center;
 }
 
 nav li {
-    display: inline-block;
     font-size: 1em;
-    font-family: Verdana, Arial, sans-serif;
-    font-weight: bold;
+    font-family: "Francois One", sans-serif;
+    border-top: 1px solid #ff0095
 }
 
 nav li a {
-    display: inline-block;
+    display: block;
     color: #ff0095;
-    text-align: center;
     padding: 0.5em 1em;
     text-decoration: none;
+}
+
+/* Show mobile class, hide tablet-desktop class */
+.mobile {
+    display: block
+}
+
+.tablet-desktop {
+    display: none;
 }
 
 /* Style rules for the main content */
 main {
     clear: left;
-    padding: 2%;
+    padding: 5%;
     font-size: 1.25em;
+    font-family: "Roboto Slab", serif;
 }
 
 #me {
@@ -67,13 +73,12 @@ main {
     float: left;
 }
 #intro {
-    width: 50%;
+    width: 100%;
     height: auto;
-    float: right;
 }
 
-#photography {
-    float: right;
+.round {
+    border-radius: 8px;
 }
 
 #contact {
@@ -85,14 +90,12 @@ main {
     text-decoration: none;
 }
 
-#socials {
-    text-align: center;
-}
-
+/*
 .map {
     border: 4px solid #000;
-    align-content: center;
+    align-content: left;
 }
+*/
 
 /* Style rules for footer content */
 footer {
