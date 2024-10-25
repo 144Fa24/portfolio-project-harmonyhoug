@@ -39,9 +39,9 @@ nav ul {
 }
 
 nav li {
-    font-size: 1em;
+    font-size: 20px;
     font-family: "Francois One", sans-serif;
-    border-top: 1px solid #ff0095
+    border-bottom: 1px solid #ff0095
 }
 
 nav li a {
@@ -49,15 +49,6 @@ nav li a {
     color: #ff0095;
     padding: 0.5em 1em;
     text-decoration: none;
-}
-
-/* Show mobile class, hide tablet-desktop class */
-.mobile {
-    display: block
-}
-
-.tablet-desktop {
-    display: none;
 }
 
 /* Style rules for the main content */
@@ -77,12 +68,19 @@ main {
     height: auto;
 }
 
+#list {
+    border: 1px solid #ff0095;
+    background-color: #fec9da;
+    padding: 3%;
+}
+
 .round {
     border-radius: 8px;
 }
 
 #contact {
     text-align: center;
+    text-decoration: none;
 }
 
 #contact a {
@@ -90,12 +88,10 @@ main {
     text-decoration: none;
 }
 
-/*
 .map {
     border: 4px solid #000;
-    align-content: left;
+    align-content: center;
 }
-*/
 
 /* Style rules for footer content */
 footer {
@@ -103,4 +99,85 @@ footer {
     text-align: center;
     text-decoration: none;
     color: #ff0095;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px) {  
+
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .tablet-desktop {
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    /* Tablet Viewport: Style rule for header */
+    header {
+      position: static;
+      padding-bottom: 2%;
+    }
+
+    /* Tablet Viewport: Style rules for nav area */
+    nav li {
+      border-top: none;
+      display: inline-block;
+      border-right: 1px solid #ff0095;
+    }
+  
+    nav li:last-child{
+      border-right: none;
+    }
+  
+    nav li a {
+      padding: 0.1em 0.75em;
+    }
+    
+    /* Tablet Viewport: Style rules for main content area */
+    .map {
+        width: 550px;
+        height: 250px;
+    }
+    
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px) {
+
+    /* Desktop Viewport: Style rules for nav area */
+    nav {
+        float: right;
+        width: 70%;
+        margin: 1em 1em 0 0;
+    }
+    
+    nav ul {
+        text-align: right;
+    }
+    
+    nav li {
+        border: none;
+    }
+    
+    nav li a {
+        padding: 0.5em 1em;
+    }
+    
+    nav li a:hover {
+        color: #000;
+        background-color: #ff0095;
+    }
+
+    /* Desktop Viewport: Style rules for main content */
+    main {
+        padding: 4em;
+    }
+    
+    .map {
+        width: 1130px;
+        height: 450px;
+        
+    }
+
 }
